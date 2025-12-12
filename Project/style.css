@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+form {
+    background-color: #fff;
+    padding: 40px 50px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    text-align: center; /* center header */
+}
+
+/* Header styling */
+form h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #003366;
+}
+
+/* Make label and input on same line */
+label {
+    display: inline-block;
+    width: 120px; /* increase label width */
+    font-size: 18px; /* bigger text */
+}
+
+/* Input styling */
+input[type="text"], input[type="password"] {
+    padding: 12px;
+    width: 250px; /* increase input width */
+    font-size: 18px; /* bigger text */
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 20px;
+    font-size: 18px; /* bigger text */
+    background-color: #003366;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0055a5;
+}
