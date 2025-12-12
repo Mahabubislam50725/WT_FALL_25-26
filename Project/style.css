@@ -2,10 +2,18 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f0f8ff;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+}
+
+h1 {
+    font-size: 22px;
+    color: #003366;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 form {
@@ -13,28 +21,33 @@ form {
     padding: 40px 50px;
     border-radius: 12px;
     box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-    text-align: center; /* center header */
+    text-align: center;
+    width: 450px;
 }
 
-/* Header styling */
 form h2 {
     font-size: 28px;
     margin-bottom: 30px;
     color: #003366;
 }
 
-/* Make label and input on same line */
+/* Labels and inputs in one row without div */
 label {
     display: inline-block;
-    width: 120px; /* increase label width */
-    font-size: 18px; /* bigger text */
+    width: 140px;
+    text-align: right;
+    margin-right: 10px;
+    font-size: 18px;
 }
 
-/* Input styling */
-input[type="text"], input[type="password"] {
-    padding: 12px;
-    width: 250px; /* increase input width */
-    font-size: 18px; /* bigger text */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+select {
+    display: inline-block;
+    width: 250px;
+    padding: 10px;
+    font-size: 18px;
     border: 1px solid #ccc;
     border-radius: 6px;
 }
@@ -43,8 +56,8 @@ input[type="text"], input[type="password"] {
 button {
     width: 100%;
     padding: 14px;
-    margin-top: 20px;
-    font-size: 18px; /* bigger text */
+    margin-top: 10px;
+    font-size: 18px;
     background-color: #003366;
     color: #fff;
     border: none;
@@ -54,4 +67,20 @@ button {
 
 button:hover {
     background-color: #0055a5;
+}
+
+/* Register text link */
+.register-text {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.register-text a {
+    color: #003366;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register-text a:hover {
+    text-decoration: underline;
 }
