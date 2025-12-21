@@ -1,3 +1,4 @@
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f8ff;
@@ -8,51 +9,69 @@ body {
     height: 100vh;
     margin: 0;
 }
- 
+
 h1 {
     font-size: 22px;
     color: #003366;
     margin-bottom: 20px;
     text-align: center;
 }
- 
+
+
 form {
     background-color: #fff;
     padding: 40px 50px;
     border-radius: 12px;
     box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    width: 500px;
     text-align: center;
-    width: 450px;
 }
- 
+
 form h2 {
     font-size: 28px;
     margin-bottom: 30px;
     color: #003366;
 }
- 
-/* Labels and inputs in one row without div */
+
+.form-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+
 label {
-    display: inline-block;
     width: 140px;
     text-align: right;
     margin-right: 10px;
     font-size: 18px;
 }
- 
+
 input[type="text"],
 input[type="password"],
 input[type="email"],
 select {
-    display: inline-block;
-    width: 250px;
+    flex: 1; 
     padding: 10px;
     font-size: 18px;
     border: 1px solid #ccc;
     border-radius: 6px;
 }
- 
-/* Button styling */
+
+
+.error {
+    width: 150px;
+    margin-left: 10px;
+    color: red;
+    font-size: 14px;
+}
+
+
+label, input, select, .error {
+    margin-bottom: 15px;
+}
+
+
 button {
     width: 100%;
     padding: 14px;
@@ -64,24 +83,56 @@ button {
     border-radius: 6px;
     cursor: pointer;
 }
- 
+
 button:hover {
     background-color: #0055a5;
 }
- 
-/* Register text link */
+
+
 .register-text {
     font-size: 14px;
     margin-top: 10px;
+    text-align: center;
 }
- 
+
 .register-text a {
     color: #003366;
     text-decoration: none;
     font-weight: bold;
 }
- 
+
 .register-text a:hover {
     text-decoration: underline;
 }
- 
+
+
+.register-form .form-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.register-form label {
+    width: 140px;
+    text-align: right;
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.register-form input[type="text"],
+.register-form input[type="password"],
+.register-form input[type="email"],
+.register-form select {
+    flex: 1;
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.register-form .error {
+    width: 150px;
+    margin-left: 10px;
+    color: red;
+    font-size: 14px;
+}
