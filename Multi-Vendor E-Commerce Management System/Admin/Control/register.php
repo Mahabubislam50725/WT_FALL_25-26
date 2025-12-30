@@ -63,48 +63,49 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
 
 <form method="post" action="">
-    <h1>Registration Page</h1>
-
     <?php if(!empty($success_msg)) echo "<p class='success'>$success_msg</p>"; ?>
 
     <div>
-        Username:
-        <input type="text" name="username" value="<?php echo htmlspecialchars($username); ?>">
-        <?php if(!empty($username_err)) echo "<div class='error'>$username_err</div>"; ?>
-    </div>
+    Username:
+    <input type="text" name="username" value="<?php echo htmlspecialchars($username); ?>">
+     <span class="error"><?php echo $username_err; ?></span> 
+   </div>
 
-    <div>
-        Email:
-        <input type="email" name="email" value="<?php echo htmlspecialchars($email); ?>">
-        <?php if(!empty($email_err)) echo "<div class='error'>$email_err</div>"; ?>
-    </div>
+   <div>
+    Email:
+    <input type="email" name="email" value="<?php echo htmlspecialchars($email); ?>">
+    <span class="error"><?php echo $email_err; ?></span>
+   </div>
 
-    <div>
-        Age:
-        <input type="number" name="age" value="<?php echo htmlspecialchars($age); ?>">
-        <?php if(!empty($age_err)) echo "<div class='error'>$age_err</div>"; ?>
-    </div>
+   <div>
+    Age:
+    <input type="number" name="age" value="<?php echo htmlspecialchars($age); ?>">
+    <span class="error"><?php echo $age_err; ?></span>
+   </div>
 
-    <div>
-        Password:
-        <input type="password" name="password" value="<?php echo htmlspecialchars($password); ?>">
-        <?php if(!empty($password_err)) echo "<div class='error'>$password_err</div>"; ?>
-    </div>
+   <div>
+    Password:
+    <input type="password" name="password" value="<?php echo htmlspecialchars($password); ?>">
+     <span class="error"><?php echo $password_err; ?></span>
+   </div>
 
-    <div>
-        Confirm Password:
-        <input type="password" name="confirm_password" value="<?php echo htmlspecialchars($confirm_password); ?>">
-        <?php if(!empty($confirm_password_err)) echo "<div class='error'>$confirm_password_err</div>"; ?>
-    </div>
+   <div>
+    Confirm Password:
+    <input type="password" name="confirm_password" value="<?php echo htmlspecialchars($confirm_password); ?>">
+     <span class="error"><?php echo $confirm_password_err; ?></span>
+   </div>
+    <br>
 
     <div id="button">
         <button type="submit">Register</button>
     </div>
+    <br>
 
     <div class="register-link">
         Already have an account? 
         <a href="login.php">Login here</a>
     </div>
+
 </form>
 
 </body>

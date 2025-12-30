@@ -21,7 +21,7 @@ form {
     background: #f5f5f5;
     padding: 25px;
     border-radius: 10px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 /* Heading */
@@ -33,7 +33,9 @@ h1 {
 
 /* Input group */
 div {
-    margin-bottom: 12px;
+    margin-bottom: 15px; /* space between fields */
+    display: flex;
+    flex-direction: column; /* error/success message below input */
 }
 
 /* Inputs */
@@ -61,18 +63,22 @@ input:focus {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 16px;
 }
 
 #button button:hover {
     background: #17a673;
 }
 
-/* Error & Success */
+/* Error Messages */
 .error {
     color: red;
     font-size: 13px;
+    margin-top: 5px;
+    display: block;
 }
 
+/* Success Messages */
 .success {
     color: green;
     text-align: center;
@@ -90,4 +96,7 @@ input:focus {
     text-decoration: none;
     color: #4e73df;
     font-weight: bold;
+}
+.register-link a:hover {
+    text-decoration: underline;
 }
