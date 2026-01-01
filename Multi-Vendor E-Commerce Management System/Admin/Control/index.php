@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
    <link rel="stylesheet" href="../CSS/index.css">
-
+   <link rel="icon" href="../Image/home.avif" >
 
 </head>
 <body>
