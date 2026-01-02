@@ -35,7 +35,7 @@ if (!isset($_SESSION['username'])) {
               
     </div>
       <div class="adminBody">
-           <h1>Admin dashboard</h1>
+           <h1 style="text-align:center;git ">Admin dashboard</h1>
             <h2 style="margin-top: 40px;">Manage Sellers</h2>
             <button class="btn btn-primary" style="margin-bottom: 20px;">Add New Seller</button>
             <div class="table-container">
