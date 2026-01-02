@@ -30,7 +30,8 @@ if (!isset($_SESSION['username'])) {
                 <li class="navlist">Home</li>
                 <li class="navlist">View Order</li>
                 <li class="navlist">Sales Report</li>
-                <li class="navlist"><a href="../View/logout.php" style="text-decoration:none; color:inherit;">Logout</li>
+               <li><a href="../View/logout.php" class="logout-btn">Logout</a></li>
+
               </ul>
               
     </div>

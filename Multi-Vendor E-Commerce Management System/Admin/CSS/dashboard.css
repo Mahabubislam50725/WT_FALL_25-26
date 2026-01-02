@@ -28,6 +28,20 @@ body{
     color: white;
     
 }
+.logout-btn {
+    display: inline-block;
+    padding: 5px 12px;
+    background-color: #e74c3c; /* red color */
+    color: #fff; /* white text */
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.logout-btn:hover {
+    background-color: #c0392b; /* darker red on hover */
+}
+
 .table-container {
             overflow-x: auto;
             margin-top: 20px;
@@ -99,4 +113,3 @@ body{
     border-radius: 10px;
     background: white;
 }
-
