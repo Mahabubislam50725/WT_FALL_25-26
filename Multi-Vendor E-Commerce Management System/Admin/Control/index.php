@@ -4,15 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-   <link rel="stylesheet" href="../CSS/index.css">
-   <link rel="icon" href="../Image/home.avif" >
-
+    <link rel="stylesheet" href="../CSS/index.css">
+    <link rel="icon" href="../Image/home.avif">
 </head>
 <body>
     <div class="container">
-     <h1>Welcome to Our Website</h1>
-    <p>Please <a href="login.php">Login</a></p>
+        <h1>Welcome to Our Website</h1>
+        <p>Please <a href="login.php">Login</a></p>
     </div>
-    
 </body>
 </html>
+
