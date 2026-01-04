@@ -1,0 +1,129 @@
+body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f5f7fb;
+        }
+        
+        h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .dashboard {
+            
+            gap: 20px;
+            padding: 30px;
+        }
+
+
+         .header {
+           
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .product-info {
+            padding: 15px;
+        
+        }
+     
+.cards{
+            display: flex;
+            gap: 10px;
+}      
+        .card{
+           
+            width: 50%;
+            background-color: rgb(114, 90, 208);
+            padding: 25px;
+            border-radius: 12px;
+            color:white;
+           
+        }
+         .card h4 {
+            font-size: 20px;
+            color:white;
+            
+        }
+         .card p {
+            font-size: 16px;
+        }
+
+         .Add-Products-btn {
+            
+            float: right;
+            background: #1c51ffff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-size: 15px;
+            cursor: pointer;
+            margin-top: -55px;
+         }
+
+           .navbar {
+            background: #fff;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .Logout {
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            background: #fff;
+            cursor: pointer;
+            margin-inline-end: 30px;
+        }
+
+
+         .click {
+            margin-top: 10px;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            padding: 8px 8px;
+            margin-right: 10px;
+            border-radius: 6px;
+            
+         }
+         
+         
+        .actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+         .Edit {
+            padding: 5px 50px;
+           
+            border: 1px solid;
+            background: #fff;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        
+         .Save {
+            padding: 5px 50px;
+            border: 1px solid;
+            background: #fff;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .Delete {
+            
+            padding: 5px 50px;
+            border: 1px solid;
+            background: #fff;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+       
