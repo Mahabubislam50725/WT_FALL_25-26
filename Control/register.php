@@ -106,13 +106,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <div>
         Username:
-        <input type="text" name="username" value="<?php echo htmlspecialchars($username); ?>">
+        <input type="text" name="username" Placeholder="Enter Your Username" value="<?php echo htmlspecialchars($username); ?>">
         <?php if(!empty($username_err)) echo "<div class='error'>$username_err</div>"; ?>
     </div>
 
     <div>
         Email:
-        <input type="email" name="email" value="<?php echo htmlspecialchars($email); ?>">
+        <input type="email" name="email" Placeholder="Enter Your Email" value="<?php echo htmlspecialchars($email); ?>">
         <?php if(!empty($email_err)) echo "<div class='error'>$email_err</div>"; ?>
     </div>
 
@@ -129,13 +129,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <div>
         Password:
-        <input type="password" name="password" value="<?php echo htmlspecialchars($password); ?>">
+        <input type="password" name="password" Placeholder="Enter Your Password" value="<?php echo htmlspecialchars($password); ?>">
         <?php if(!empty($password_err)) echo "<div class='error'>$password_err</div>"; ?>
     </div>
 
     <div>
         Confirm Password:
-        <input type="password" name="confirm_password" value="<?php echo htmlspecialchars($confirm_password); ?>">
+        <input type="password" name="confirm_password" Placeholder="Enter Your Password" value="<?php echo htmlspecialchars($confirm_password); ?>">
         <?php if(!empty($confirm_password_err)) echo "<div class='error'>$confirm_password_err</div>"; ?>
     </div>
 

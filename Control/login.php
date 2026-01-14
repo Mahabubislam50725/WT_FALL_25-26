@@ -70,13 +70,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <div>
         Username:
-        <input type="text" name="username" value="<?php echo htmlspecialchars($username); ?>">
+        <input type="text" name="username" Placeholder="Enter Your Username" value="<?php echo htmlspecialchars($username); ?>">
         <?php if(!empty($username_err)) echo "<div class='error'>$username_err</div>"; ?>
     </div>
 
     <div>
         Password:
-        <input type="password" name="password" value="<?php echo htmlspecialchars($password); ?>">
+        <input type="password" name="password" Placeholder="Enter Your Password" value="<?php echo htmlspecialchars($password); ?>">
         <?php if(!empty($password_err)) echo "<div class='error'>$password_err</div>"; ?>
     </div>
 
