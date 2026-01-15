@@ -3,7 +3,7 @@ session_start();
 
 // Check if user is logged in
 if (!isset($_SESSION['username'])) {
-    header("Location: index.php");
+    header("Location: login.php");
     exit();
 }
 
@@ -11,6 +11,14 @@ if (!isset($_SESSION['username'])) {
 include '../Model/logindb.php';
 
 $success = $error = "";
+if (isset($_SESSION['success'])) {
+    $success = $_SESSION['success'];
+    unset($_SESSION['success']);
+}
+if (isset($_SESSION['error'])) {
+    $error = $_SESSION['error'];
+    unset($_SESSION['error']);
+}
 $showSellerModal = false;
 $showCustomerModal = false;
 $showCategoryModal = false;
@@ -22,15 +30,17 @@ if (isset($_POST['addcategory'])) {
     $price = $_POST['price'];
     
     if (empty($category_name) || empty($products) || empty($price)) {
-        $error = "All fields are required!";
+        $_SESSION['error'] = "All fields are required!";
     } else {
         $sql = "INSERT INTO categories (category_name, products, price) VALUES ('$category_name', '$products', '$price')";
         if (mysqli_query($conn, $sql)) {
-            $success = "Category added successfully!";
+            $_SESSION['success'] = "Category added successfully!";
         } else {
-            $error = mysqli_error($conn);
+            $_SESSION['error'] = mysqli_error($conn);
         }
     }
+    header("Location: Dashboard.php");
+    exit();
 }
 
 /* UPDATE CATEGORY */
@@ -42,17 +52,21 @@ if (isset($_POST['updatecategory'])) {
     
     $sql = "UPDATE categories SET category_name='$category_name', products='$products', price='$price' WHERE id=$id";
     if (mysqli_query($conn, $sql)) {
-        $success = "Category updated successfully!";
+        $_SESSION['success'] = "Category updated successfully!";
     } else {
-        $error = mysqli_error($conn);
+        $_SESSION['error'] = mysqli_error($conn);
     }
+    header("Location: Dashboard.php");
+    exit();
 }
 
 /* DELETE CATEGORY */
 if (isset($_POST['deletecategory'])) {
     $id = $_POST['deletecategory'];
     mysqli_query($conn, "DELETE FROM categories WHERE id=$id");
-    $success = "Category deleted successfully!";
+    $_SESSION['success'] = "Category deleted successfully!";
+    header("Location: Dashboard.php");
+    exit();
 }
 
 /* FETCH CATEGORY FOR EDIT */
@@ -77,17 +91,19 @@ if (isset($_POST['add'])) {
     $role = $_POST['role'];
     
     if (empty($username) || empty($password) || empty($email)) {
-        $error = "All fields are required!";
+        $_SESSION['error'] = "All fields are required!";
     } else {
         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
         $sql = "INSERT INTO users (username, password, email, role) 
                 VALUES ('$username', '$hashedPassword', '$email', '$role')";
         if (mysqli_query($conn, $sql)) {
-            $success = "Seller added successfully!";
+            $_SESSION['success'] = "Seller added successfully!";
         } else {
-            $error = mysqli_error($conn);
+            $_SESSION['error'] = mysqli_error($conn);
         }
     }
+    header("Location: Dashboard.php");
+    exit();
 }
 
 /* UPDATE SELLER */
@@ -98,17 +114,21 @@ if (isset($_POST['update'])) {
     
     $sql = "UPDATE users SET username='$username', email='$email' WHERE id=$id";
     if (mysqli_query($conn, $sql)) {
-        $success = "Seller updated successfully!";
+        $_SESSION['success'] = "Seller updated successfully!";
     } else {
-        $error = mysqli_error($conn);
+        $_SESSION['error'] = mysqli_error($conn);
     }
+    header("Location: Dashboard.php");
+    exit();
 }
 
 /* DELETE SELLER */
 if (isset($_POST['delete'])) {
     $id = $_POST['delete'];
     mysqli_query($conn, "DELETE FROM users WHERE id=$id");
-    $success = "Seller deleted successfully!";
+    $_SESSION['success'] = "Seller deleted successfully!";
+    header("Location: Dashboard.php");
+    exit();
 }
 
 /* FETCH SELLER FOR EDIT */
@@ -133,17 +153,19 @@ if (isset($_POST['addcustomer'])) {
     $role = $_POST['role'];
     
     if (empty($username) || empty($password) || empty($email)) {
-        $error = "All fields are required!";
+        $_SESSION['error'] = "All fields are required!";
     } else {
         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
         $sql = "INSERT INTO users (username, password, email, role) 
                 VALUES ('$username', '$hashedPassword', '$email', '$role')";
         if (mysqli_query($conn, $sql)) {
-            $success = "Customer added successfully!";
+            $_SESSION['success'] = "Customer added successfully!";
         } else {
-            $error = mysqli_error($conn);
+            $_SESSION['error'] = mysqli_error($conn);
         }
     }
+    header("Location: Dashboard.php");
+    exit();
 }
 
 /* UPDATE CUSTOMER */
@@ -154,17 +176,21 @@ if (isset($_POST['updatecustomer'])) {
     
     $sql = "UPDATE users SET username='$username', email='$email' WHERE id=$id";
     if (mysqli_query($conn, $sql)) {
-        $success = "Customer updated successfully!";
+        $_SESSION['success'] = "Customer updated successfully!";
     } else {
-        $error = mysqli_error($conn);
+        $_SESSION['error'] = mysqli_error($conn);
     }
+    header("Location: Dashboard.php");
+    exit();
 }
 
 /* DELETE CUSTOMER */
 if (isset($_POST['deletecustomer'])) {
     $id = $_POST['deletecustomer'];
     mysqli_query($conn, "DELETE FROM users WHERE id=$id");
-    $success = "Customer deleted successfully!";
+    $_SESSION['success'] = "Customer deleted successfully!";
+    header("Location: Dashboard.php");
+    exit();
 }
 
 /* FETCH CUSTOMER FOR EDIT */
