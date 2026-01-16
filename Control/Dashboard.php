@@ -8,7 +8,7 @@ if (!isset($_SESSION['username'])) {
 }
 
 // Database connection
-include '../Model/logindb.php';
+include '../Model/db.php';
 
 $success = $error = "";
 if (isset($_SESSION['success'])) {
@@ -231,7 +231,7 @@ $categoryResult = mysqli_query($conn, "SELECT * FROM categories");
         <div class="adminNav">
             <h1>🛒 Multi-Vendor E-Commerce</h1>
             <ul class="nav">
-                <li class="navlist">Home</li>
+                <li class="navlist"><?php if(isset($_COOKIE['remember_user'])) { echo '<a href="index.php">Home</a>'; } else { echo 'Home'; } ?></li>
                 <li class="navlist">View Order</li>
                 <li class="navlist">Sales Report</li>
                 <li><a href="logout.php" class="logout-btn">Logout</a></li>

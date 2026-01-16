@@ -1,3 +1,16 @@
+<?php
+session_start();
+
+if (isset($_SESSION['username']) && !isset($_COOKIE['remember_user'])) {
+    header("Location: Dashboard.php");
+    exit();
+}
+
+if (isset($_COOKIE['remember_user']) && isset($_SESSION['username'])) {
+    session_destroy();
+    session_start();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

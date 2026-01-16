@@ -6,7 +6,7 @@ if (!isset($_SESSION['username'])) {
     exit();
 }
 
-include '../Model/logindb.php';
+include '../Model/db.php';
 
 $success = $error = "";
 $showCategoryModal = false;

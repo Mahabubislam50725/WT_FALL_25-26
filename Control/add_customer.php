@@ -1,23 +1,14 @@
 <?php
 session_start();
 
-// Check if user is logged in
+
 if (!isset($_SESSION['username'])) {
     header("Location: ../View/login.php");
     exit();
 }
 
-// Database connection
-$host = "localhost";
-$user = "root";
-$pass = "";
-$dbname = "multi-vendor e-commerce";
 
-$conn = mysqli_connect($host, $user, $pass, $dbname);
-
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
+include('../Model/db.php');
 
 $success = $error = "";
 

@@ -3,7 +3,7 @@
 
 <?php
 session_start();
-include "../Model/logindb.php";
+include "../Model/db.php";
 
 $username = $password = "";
 $username_err = $password_err = "";

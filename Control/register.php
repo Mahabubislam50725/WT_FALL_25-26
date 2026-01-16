@@ -1,5 +1,5 @@
  <?php
-include "../Model/logindb.php";
+include "../Model/db.php";
 $success = $error = "";
 if ($_SERVER["REQUEST_METHOD"]=="POST")
 {
