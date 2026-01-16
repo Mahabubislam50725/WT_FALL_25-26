@@ -8,7 +8,6 @@ include "../Model/db.php";
 $username = $password = "";
 $username_err = $password_err = "";
 
-// Check if remember me cookie exists
 if (isset($_COOKIE['remember_user']) && !isset($_SESSION['username'])) {
     $_SESSION['username'] = $_COOKIE['remember_user'];
     $_SESSION['role'] = $_COOKIE['remember_role'];
