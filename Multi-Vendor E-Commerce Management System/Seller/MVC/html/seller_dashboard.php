@@ -92,3 +92,31 @@
                     </tbody>
                 </table>
             </div>
+ <h2 style="margin-top: 40px;">Recent Orders</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Customer</th>
+                            <th>Product</th>
+                            <th>Quantity</th>
+                            <th>Total</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#ORD-001</td>
+                            <td>John Doe</td>
+                            <td>Wireless Headphones</td>
+                            <td>2</td>
+                            <td>$179.98</td>
+                            <td><span class="status-badge status-pending">Pending</span></td>
+                            <td>
+                                <button class="action-btn view-btn">View</button>
+                                <button class="action-btn edit-btn">Update</button>
+                            </td>
+                        </tr>
+                        <tr>
