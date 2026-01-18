@@ -186,6 +186,11 @@
                     <label>Category:</label><br>
                     <input type="text" name="category" value="<?php echo htmlspecialchars($edit_product['category']); ?>" required style="width: 100%; padding: 8px; margin-top: 5px;">
                 </div>
+                 <div style="margin-bottom: 15px;">
+                    <label>Price:</label><br>
+                    <input type="number" name="price" value="<?php echo $edit_product['price']; ?>" step="0.01" required style="width: 100%; padding: 8px; margin-top: 5px;">
+                </div>
+
 
 
 
