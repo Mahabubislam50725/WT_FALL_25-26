@@ -163,6 +163,15 @@
                     <label>Password:</label><br>
                     <input type="password" name="password" placeholder="Leave blank to keep current password" style="width: 100%; padding: 8px; margin-top: 5px;">
                 </div>
+                <div style="text-align: right;">
+                    <a href="seller_dashboard.php" style="margin-right: 10px; text-decoration: none; color: #666;">Cancel</a>
+                    <button type="submit" name="update_profile" style="background: #007bff; color: white; padding: 8px 16px; border: none; border-radius: 4px;">Update Profile</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <?php endif; ?>
+
 
 
 
