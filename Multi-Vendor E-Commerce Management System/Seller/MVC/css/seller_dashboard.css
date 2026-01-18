@@ -218,6 +218,20 @@ tbody tr:hover {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
+.modal.show {
+    display: block;
+}
+
+.modal-content {
+    background-color: white;
+    margin: 5% auto;
+    padding: 0;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
 
 
 
