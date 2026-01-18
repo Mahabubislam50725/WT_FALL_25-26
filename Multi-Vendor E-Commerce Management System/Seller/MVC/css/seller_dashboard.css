@@ -163,6 +163,48 @@ tbody tr:hover {
     background: #6c757d;
     color: white;
 }
+.status-pending {
+    background: #ffc107;
+    color: #333;
+}
+
+.status-shipped {
+    background: #17a2b8;
+    color: white;
+}
+
+.status-delivered {
+    background: #28a745;
+    color: white;
+}
+.status-pending {
+    background: #ffc107;
+    color: #333;
+}
+
+.status-shipped {
+    background: #17a2b8;
+    color: white;
+}
+
+.status-delivered {
+    background: #28a745;
+    color: white;
+}
+.status-pending {
+    background: #ffc107;
+    color: #333;
+}
+
+.status-shipped {
+    background: #17a2b8;
+    color: white;
+}
+
+.status-delivered {
+    background: #28a745;
+    color: white;
+}
 
 
 

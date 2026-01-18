@@ -171,6 +171,11 @@
         </div>
     </div>
     <?php endif; ?>
+    <?php if ($show_edit_form && $edit_product): ?>
+    <!-- Edit Product Form -->
+    <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1000;">
+        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 20px; border-radius: 8px; width: 400px;">
+
 
 
 
