@@ -32,6 +32,97 @@ if (!isset($_SESSION['user_id'])) {
     $seller_id = $_SESSION['user_id'];
 }
 
+// Delete Product
+if (isset($_GET['delete_id'])) {
+    $delete_id = $_GET['delete_id'];
+    $sql = "DELETE FROM products WHERE id='$delete_id' AND seller_id='$seller_id'";
+    if (mysqli_query($conn, $sql)) {
+        $success = "Product deleted successfully!";
+    } else {
+        $error = "Error deleting product!";
+    }
+    header("Location: seller_dashboard.php");
+    exit();
+}
+
+// Get product for editing
+if (isset($_GET['edit_id'])) {
+    $edit_id = $_GET['edit_id'];
+    $edit_result = mysqli_query($conn, "SELECT * FROM products WHERE id='$edit_id' AND seller_id='$seller_id'");
+    if ($edit_result && mysqli_num_rows($edit_result) > 0) {
+        $edit_product = mysqli_fetch_assoc($edit_result);
+    }
+}
+
+// Update Product
+if (isset($_POST['update_product'])) {
+    $product_id = $_POST['product_id'];
+    $product_name = $_POST['product_name'];
+    $category = $_POST['category'];
+    $price = $_POST['price'];
+    
+    if (empty($product_name) || empty($category) || empty($price)) {
+        $error = "All fields are required!";
+    } else {
+        $sql = "UPDATE products SET product_name='$product_name', category='$category', price='$price' 
+                WHERE id='$product_id' AND seller_id='$seller_id'";
+        if (mysqli_query($conn, $sql)) {
+            $success = "Product updated successfully!";
+            header("Location: seller_dashboard.php");
+            exit();
+        } else {
+            $error = mysqli_error($conn);
+        }
+    }
+}
+
+// Update Profile
+if (isset($_POST['update_profile'])) {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    
+    if (!empty($password)) {
+        $sql = "UPDATE users SET username='$username', password='$password' WHERE id='$seller_id'";
+    } else {
+        $sql = "UPDATE users SET username='$username' WHERE id='$seller_id'";
+    }
+    
+    if (mysqli_query($conn, $sql)) {
+        $_SESSION['username'] = $username;
+        $success = "Profile updated successfully!";
+        header("Location: seller_dashboard.php");
+        exit();
+    } else {
+        $error = mysqli_error($conn);
+    }
+}
+
+// Add Product
+if (isset($_POST['add_product'])) {
+    $product_name = $_POST['product_name'];
+    $category = $_POST['category'];
+    $price = $_POST['price'];
+    
+    if (empty($product_name) || empty($category) || empty($price)) {
+        $error = "All fields are required!";
+    } else {
+        $sql = "INSERT INTO products (product_name, category, price, seller_id, status) 
+                VALUES ('$product_name', '$category', '$price', '$seller_id', 'Active')";
+        if (mysqli_query($conn, $sql)) {
+            $success = "Product added successfully!";
+            header("Location: seller_dashboard.php");
+            exit();
+        } else {
+            $error = mysqli_error($conn);
+        }
+    }
+}
+
+// Fetch Products
+$result = mysqli_query($conn, "SELECT * FROM products WHERE seller_id='$seller_id'");
+$profile_result = mysqli_query($conn, "SELECT * FROM users WHERE id='$seller_id'");
+$profile = $profile_result ? mysqli_fetch_assoc($profile_result) : [];
+?>
 
 
 <!DOCTYPE html>
