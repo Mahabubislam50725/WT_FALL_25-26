@@ -23,7 +23,7 @@ $showSellerModal = false;
 $showCustomerModal = false;
 $showCategoryModal = false;
 
-/* ADD CATEGORY */
+/* add CATEGORY */
 if (isset($_POST['addcategory'])) {
     $category_name = $_POST['category_name'];
     $products = $_POST['products'];
@@ -69,7 +69,7 @@ if (isset($_POST['deletecategory'])) {
     exit();
 }
 
-/* FETCH CATEGORY FOR EDIT */
+
 $editCategory = null;
 if (isset($_POST['editcategory'])) {
     $id = $_POST['editcategory'];
@@ -78,7 +78,7 @@ if (isset($_POST['editcategory'])) {
     $showCategoryModal = true;
 }
 
-/* CHECK IF ADD CATEGORY BUTTON CLICKED */
+
 if (isset($_POST['actioncategory']) && $_POST['actioncategory'] == 'add') {
     $showCategoryModal = true;
 }
@@ -207,13 +207,13 @@ if (isset($_POST['actioncustomer']) && $_POST['actioncustomer'] == 'add') {
     $showCustomerModal = true;
 }
 
-/* FETCH SELLERS */
+
 $result = mysqli_query($conn, "SELECT * FROM users WHERE role='Seller'");
 
-/* FETCH CUSTOMERS */
+
 $customerResult = mysqli_query($conn, "SELECT * FROM users WHERE role='Customer'");
 
-/* FETCH CATEGORIES */
+
 $categoryResult = mysqli_query($conn, "SELECT * FROM categories");
 ?>
 
