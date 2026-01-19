@@ -12,7 +12,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
 }
 
 /* Form */
@@ -47,14 +47,14 @@ input[type="password"] {
 
 input:focus {
     outline: none;
-    border-color: #4e73df;
+    border-color: #667eea;
 }
 
 /* Button */
 #button button {
     width: 100%;
     padding: 10px;
-    background: #4e73df;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
     border: none;
     border-radius: 5px;
@@ -62,7 +62,7 @@ input:focus {
 }
 
 #button button:hover {
-    background: #2e59d9;
+    background: linear-gradient(135deg, #5a6fd8 0%, #6a4c93 100%);
 }
 
 /* Error */
@@ -80,6 +80,6 @@ input:focus {
 
 .register-link a {
     text-decoration: none;
-    color: #4e73df;
+    color: #667eea;
     font-weight: bold;
 }
