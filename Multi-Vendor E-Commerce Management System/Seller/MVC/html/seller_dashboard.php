@@ -242,11 +242,10 @@ $profile = $profile_result ? mysqli_fetch_assoc($profile_result) : [];
                             <td>
                                 <button class="action-btn view-btn">View</button>
                                 <button class="action-btn edit-btn">Update</button>
-                            </td>
+                        </td>
                         </tr>
-                        
+
                         <tr>
-                            
                             <td>#ORD-002</td>
                             <td>Jane Smith</td>
                             <td>Smart Watch</td>
@@ -258,6 +257,7 @@ $profile = $profile_result ? mysqli_fetch_assoc($profile_result) : [];
                                 <button class="action-btn edit-btn">Update</button>
                             </td>
                         </tr>
+                        
                         <tr>
                             <td>#ORD-003</td>
                             <td>Mike Johnson</td>
