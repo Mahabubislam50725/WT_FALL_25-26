@@ -2,12 +2,6 @@
 <?php
 session_start();
 
-// Check if user is logged in
-// if (!isset($_SESSION['username'])) {
-//     header("Location: login.php");
-//     exit();
-// }
-
 // Database connection
 include '../db/db.php';
 
@@ -182,19 +176,19 @@ $profile = $profile_result ? mysqli_fetch_assoc($profile_result) : [];
             <a href="?add_product=1" class="btn btn-primary" style="margin-bottom: 20px; text-decoration: none; display: inline-block;">Add New Product</a>
             
 
-<div class="table-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Product Name</th>
-                            <th>Category</th>
-                            <th>Price</th>
-                            <th>Status</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
+    <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Product Name</th>
+                        <th>Category</th>
+                        <th>Price</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
                         <?php 
                         if (mysqli_num_rows($result) > 0) {
                             while ($row = mysqli_fetch_assoc($result)) { 
@@ -359,3 +353,13 @@ $profile = $profile_result ? mysqli_fetch_assoc($profile_result) : [];
 <?php
 mysqli_close($conn);
 ?>
+
+
+
+
+
+
+
+
+
+
